@@ -36,15 +36,16 @@ void BruteForce (int maxNumber) {
     }
     end = clock();
     timeSpent = (double)(end - begin)/1000;
-    printf("BruteForce %f s\n", timeSpent);
-
+    
     // print BruteForce Result
-    for(int i = 0; i < maxNumber; i++) {
-        if(primes[i] == TERMINATOR)  {
-            break;
-        }
-        printf("%d ", primes[i]);
-    }
+    printf("BruteForce %f s\n", timeSpent);
+    
+//    for(int i = 0; i < maxNumber; i++) {
+//        if(primes[i] == TERMINATOR)  {
+//            break;
+//        }
+//        printf("%d ", primes[i]);
+//    }
 
      free(primes);
 }
@@ -128,10 +129,10 @@ void sieveOfEratosthenes(int maxNumber) {
 
 int main()
 {
-    int MAX_NUMBER = 50000000;
+    int MAX_NUMBER = 200000;
 
     //BRUTEFORCE
-    // BruteForce(MAX_NUMBER);
+    BruteForce(MAX_NUMBER);
 
     //HALVEDSQUAREROOTBRUTEFORCE
     halvedSquareRootBruteForce(MAX_NUMBER);
